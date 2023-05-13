@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "C:\\Users\\asus\\Documents\\AR_VanMieu\\samples\\augmented-images\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\asus\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\asus\\Documents\\AR_VanMieu\\samples\\augmented-images\\.cxx\\Debug\\p2q6b201\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\asus\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\asus\\Documents\\AR_VanMieu\\samples\\augmented-images\\.cxx\\Debug\\p2q6b201\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

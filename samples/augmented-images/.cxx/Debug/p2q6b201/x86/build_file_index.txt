@@ -1,0 +1,1 @@
+C:\Users\asus\Documents\AR_VanMieu\samples\augmented-images\CMakeLists.txt
