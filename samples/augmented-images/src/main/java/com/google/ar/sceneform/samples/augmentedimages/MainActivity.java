@@ -246,13 +246,14 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
-    public void createNode(AnchorNode anchorNode, float[] position, float[] rotation, String name) {
+    public void createNode(AnchorNode anchorNode, float[] position, float[] rotation, float[] scale, String name) {
         Node node = new Node();
         node.setParent(anchorNode);
         node.setRenderable(this.mapModel.get(name)).animate(true).start();
         node.setLocalPosition(new Vector3(position[0], position[1], position[2]));
         Quaternion ro = Quaternion.axisAngle(new Vector3(rotation[0],rotation[1], rotation[2]), 1);
         node.setLocalRotation(ro);
+        node.setLocalScale(new Vector3(scale[0], scale[1], scale[2]));
     }
 
     public void onAugmentedImageTrackingUpdate(AugmentedImage augmentedImage) {
@@ -276,7 +277,10 @@ public class MainActivity extends AppCompatActivity implements
 
                 System.out.println("ABC: " + listModel.size());
                 for (int i = 0; i < listModel.size(); i++) {
-                    this.createNode(anchorNode, listModel.get(i).getPosition(), listModel.get(i).getRotation(), listModel.get(i).getName());
+                    this.createNode(anchorNode, listModel.get(i).getPosition(),
+                            listModel.get(i).getRotation(),
+                            listModel.get(i).getScale(),
+                            listModel.get(i).getName());
                 }
             }
 

@@ -71,11 +71,13 @@ public class GetFileFromURL {
                     JSONObject model = listModel.getJSONObject(i);
                     JSONArray position = model.getJSONArray("position");
                     JSONArray rotation = model.getJSONArray("rotation");
+                    JSONArray scale = model.getJSONArray("scale");
                     String nameModel = model.getString("name");
                     String url = modelFiles.getJSONObject(nameModel).getString("downloadUrl");
                     arrayList.add(new Model(nameModel,
                             new float[]{(float) position.getDouble(0), (float) position.getDouble(1), (float) position.getDouble(2)},
                             new float[]{(float) rotation.getDouble(0), (float) rotation.getDouble(1), (float) rotation.getDouble(2), 0},
+                            new float[]{(float) scale.getDouble(0), (float) scale.getDouble(1), (float) scale.getDouble(2)},
                             url));
 //                            System.out.println("ABC1: " + this.models1.size());
 //                            getUrl(fileCache, url, nameModel);
